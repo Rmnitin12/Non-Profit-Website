@@ -216,16 +216,23 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="bg-gradient-to-br from-primary/20 to-secondary/30 rounded-3xl h-80 md:h-96 flex items-center justify-center shadow-xl">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-primary/30 rounded-full flex items-center justify-center mx-auto mb-4 animate-blob">
-                      <Users className="w-10 h-10 text-primary" aria-hidden="true" />
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Users, value: "200+", label: "Families Supported" },
+                  { icon: Heart, value: "5+", label: "Years of Service" },
+                  { icon: HeartHandshake, value: "Ubuntu", label: "Our Philosophy" },
+                  { icon: BookOpen, value: "East Oakland", label: "Our Home Base" },
+                ].map(({ icon: Icon, value, label }) => (
+                  <TiltCard key={label}>
+                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-light text-center h-full">
+                      <div className="w-10 h-10 bg-brand-light rounded-xl flex items-center justify-center mx-auto mb-3">
+                        <Icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                      </div>
+                      <p className="font-heading font-black text-xl text-primary mb-1">{value}</p>
+                      <p className="text-brand-dark/60 text-xs font-medium">{label}</p>
                     </div>
-                    <p className="text-brand-dark/50 text-sm font-medium">Community Photo</p>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary/40 rounded-2xl animate-blob-slow" aria-hidden="true" />
+                  </TiltCard>
+                ))}
               </div>
             </ScrollReveal>
           </div>

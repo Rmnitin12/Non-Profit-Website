@@ -55,7 +55,6 @@ export default function ScrollReveal({
     none: "none",
   };
 
-  // Before mount: render fully visible (SSR / no-JS fallback)
   if (!mounted) {
     return <div className={className}>{children}</div>;
   }
@@ -65,9 +64,8 @@ export default function ScrollReveal({
       ref={ref}
       className={className}
       style={{
-        opacity: visible ? 1 : 0,
         transform: visible ? "translate(0,0)" : transforms[direction],
-        transition: `opacity 0.65s ease, transform 0.65s ease`,
+        transition: `transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)`,
         transitionDelay: `${delay}ms`,
       }}
     >
