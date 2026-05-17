@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Scale, Users, Zap, Shield } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -62,18 +63,21 @@ const values = [
 const team = [
   {
     initials: "SW",
+    photo: null,
     name: "Shaquala Watts",
     role: "Founder & Executive Director",
     bio: "Driven by the memory of her brothers Derrick and Darrell, Shaquala founded TSCSNC to honor their legacy and uplift Black mental health in East Oakland. Her nonprofit experience and deep community roots guide every program we build.",
   },
   {
     initials: "NR",
+    photo: "/team/nitin.png",
     name: "Nitin Ravikumar",
     role: "Chief Technology Officer",
     bio: "Nitin leads the technology vision for TSCSNC, building the digital infrastructure that connects community members to vital mental health resources. His commitment to accessible tech empowers the organization's reach and impact.",
   },
   {
     initials: "JR",
+    photo: null,
     name: "Jeffery Redic",
     role: "Community Partner",
     bio: "Jeffery brings deep ties to the East Oakland community and a passionate commitment to the mission of TSCSNC. His leadership and advocacy help bridge the gap between those in need and the resources that can transform lives.",
@@ -88,6 +92,54 @@ export default function AboutPage() {
         title="About TSCSNC"
         subtitle="Born from grief. Built on love. Sustained by community."
       />
+
+      {/* ── MEET THE TEAM ── */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Leadership</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                Meet the Team
+              </h2>
+              <p className="text-brand-dark/70 max-w-xl mx-auto">
+                Guided by the memory of the Twins, lived experience, and an unwavering commitment to Black mental health in Oakland and beyond.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {team.map((member, i) => (
+              <ScrollReveal key={member.name} direction="up" delay={i * 80}>
+                <TiltCard className="h-full">
+                  <div className="bg-brand-bg rounded-2xl p-8 shadow-sm text-center border border-brand-light h-full">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-5 shadow-md overflow-hidden bg-primary flex items-center justify-center">
+                      {member.photo ? (
+                        <Image
+                          src={member.photo}
+                          alt={member.name}
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-white font-bold text-2xl font-heading" aria-label={`${member.name} initials`}>
+                          {member.initials}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="font-heading font-bold text-xl text-brand-dark mb-1">{member.name}</h3>
+                    <p className="text-primary font-medium text-sm mb-4">{member.role}</p>
+                    <p className="text-brand-dark/70 text-sm leading-relaxed">{member.bio}</p>
+                  </div>
+                </TiltCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <MarqueeStrip />
 
       {/* ── OUR STORY INTRO ── */}
       <section className="bg-brand-bg py-16 md:py-20">
@@ -201,42 +253,6 @@ export default function AboutPage() {
                 </div>
               </TiltCard>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ── MEET THE TEAM ── */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Leadership</p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-                Meet the Team
-              </h2>
-              <p className="text-brand-dark/70 max-w-xl mx-auto">
-                Guided by the memory of the Twins, lived experience, and an unwavering commitment to Black mental health in Oakland and beyond.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member, i) => (
-              <ScrollReveal key={member.name} direction="up" delay={i * 80}>
-                <TiltCard className="h-full">
-                  <div className="bg-brand-bg rounded-2xl p-8 shadow-sm text-center border border-brand-light h-full">
-                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-5 shadow-md">
-                      <span className="text-white font-bold text-2xl font-heading" aria-label={`${member.name} initials`}>
-                        {member.initials}
-                      </span>
-                    </div>
-                    <h3 className="font-heading font-bold text-xl text-brand-dark mb-1">{member.name}</h3>
-                    <p className="text-primary font-medium text-sm mb-4">{member.role}</p>
-                    <p className="text-brand-dark/70 text-sm leading-relaxed">{member.bio}</p>
-                  </div>
-                </TiltCard>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>
