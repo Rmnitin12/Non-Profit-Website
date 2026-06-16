@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, Scale, Users, Zap, Shield, Target, CheckCircle } from "lucide-react";
+import { ElderWisdom, CommunityGroup, MeditatingMan } from "@/components/CommunityIllustrations";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import MarqueeStrip from "@/components/MarqueeStrip";
@@ -153,8 +154,13 @@ export default function AboutPage() {
 
       {/* ── OUR STORY INTRO ── */}
       <section className="bg-brand-bg py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <ScrollReveal direction="left">
+              <ElderWisdom className="w-64 md:w-80 h-auto mx-auto drop-shadow-lg" />
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+          <div className="text-center md:text-left">
             <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-4">Our Story</p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-6">
               Every Letter Has Meaning
@@ -162,7 +168,9 @@ export default function AboutPage() {
             <p className="text-brand-dark/75 text-lg leading-relaxed">
               TSCSNC is not just an acronym — it is a story of love, loss, and radical community care. Each word in our name represents a pillar of who we are and where we come from.
             </p>
-          </ScrollReveal>
+          </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -336,6 +344,21 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* ── COMMUNITY ILLUSTRATION ── */}
+      <section className="bg-brand-light py-14 md:py-20 overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Together We Heal</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-10">
+              Built on Community
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal direction="up">
+            <CommunityGroup className="w-full max-w-2xl h-auto mx-auto drop-shadow-md" />
+          </ScrollReveal>
         </div>
       </section>
 

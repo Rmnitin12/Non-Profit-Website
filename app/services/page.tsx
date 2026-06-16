@@ -6,6 +6,7 @@ import WaveDivider from "@/components/WaveDivider";
 import ServiceIntakeForm from "@/components/ServiceIntakeForm";
 import SupportQuiz from "@/components/SupportQuiz";
 import ScrollReveal from "@/components/ScrollReveal";
+import { MeditatingMan } from "@/components/CommunityIllustrations";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -96,6 +97,28 @@ export default function ServicesPage() {
               </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ILLUSTRATION BREAK ── */}
+      <section className="bg-white py-12 md:py-16 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <ScrollReveal direction="left">
+              <MeditatingMan className="w-64 md:w-80 h-auto mx-auto drop-shadow-lg" />
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+              <div>
+                <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">You Deserve Peace</p>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-5 leading-tight">
+                  Healing Starts With One Step
+                </h2>
+                <p className="text-brand-dark/75 text-lg leading-relaxed">
+                  Whether you are navigating a crisis, supporting a loved one, or simply ready to start your mental health journey — we are here. Fill out the form below and our team will reach out personally.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

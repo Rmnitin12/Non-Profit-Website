@@ -18,6 +18,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import TiltCard from "@/components/TiltCard";
 import FloatingFaces from "@/components/FloatingFaces";
+import {
+  WelcomingWoman,
+  EmpoweredWoman,
+  CommunityGroup,
+} from "@/components/CommunityIllustrations";
 
 export const metadata: Metadata = {
   title: "TSCSNC — Embracing Black Mental Health",
@@ -249,23 +254,8 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: Users, value: "200+", label: "Families Supported" },
-                  { icon: Heart, value: "5+", label: "Years of Service" },
-                  { icon: HeartHandshake, value: "Ubuntu", label: "Our Philosophy" },
-                  { icon: BookOpen, value: "East Oakland", label: "Our Home Base" },
-                ].map(({ icon: Icon, value, label }) => (
-                  <TiltCard key={label}>
-                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-light text-center h-full">
-                      <div className="w-10 h-10 bg-brand-light rounded-xl flex items-center justify-center mx-auto mb-3">
-                        <Icon className="w-5 h-5 text-primary" aria-hidden="true" />
-                      </div>
-                      <p className="font-heading font-black text-xl text-primary mb-1">{value}</p>
-                      <p className="text-brand-dark/60 text-xs font-medium">{label}</p>
-                    </div>
-                  </TiltCard>
-                ))}
+              <div className="flex justify-center items-end">
+                <WelcomingWoman className="w-72 md:w-80 lg:w-96 h-auto drop-shadow-lg" />
               </div>
             </ScrollReveal>
           </div>
@@ -307,6 +297,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── COMMUNITY ILLUSTRATION BANNER ── */}
+      <section className="bg-brand-light py-16 md:py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-center text-primary font-semibold text-sm uppercase tracking-widest mb-3">Our Community</p>
+            <h2 className="text-center font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-10">
+              We Are Stronger Together
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal direction="up">
+            <div className="flex justify-center">
+              <CommunityGroup className="w-full max-w-2xl h-auto drop-shadow-md" />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ── MARQUEE STRIP (second) ── */}
       <MarqueeStrip />
 
@@ -337,6 +344,10 @@ export default function HomePage() {
               </p>
             </div>
           </ScrollReveal>
+
+          <div className="flex justify-center mb-10">
+            <EmpoweredWoman className="w-52 md:w-64 h-auto drop-shadow-md" />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <ScrollReveal direction="left" delay={80}>
