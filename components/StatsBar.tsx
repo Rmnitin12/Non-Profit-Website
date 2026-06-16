@@ -70,7 +70,7 @@ export default function StatsBar() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-[#D93600] via-[#F56A00] to-[#FF9E1B] py-16 md:py-20">
+    <section className="bg-gradient-to-r from-[#C05820] via-[#D97038] to-[#E89050] py-16 md:py-20">
       <div
         ref={ref}
         className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6"

@@ -14,17 +14,17 @@ const segment = words.join("  ·  ") + "  ·  ";
 export default function MarqueeStrip() {
   return (
     <div
-      className="relative overflow-hidden bg-[#1C0300] py-5 select-none"
+      className="relative overflow-hidden bg-brand-light py-4 select-none border-y border-brand-light/80"
       aria-hidden="true"
     >
       <div
         className="flex whitespace-nowrap"
-        style={{ animation: "ticker 36s linear infinite" }}
+        style={{ animation: "ticker 40s linear infinite" }}
       >
-        <span className="text-[#F56A00] font-heading font-black text-2xl md:text-3xl tracking-wider shrink-0">
+        <span className="text-primary/70 font-heading font-semibold text-base md:text-lg tracking-widest shrink-0">
           {segment}
         </span>
-        <span className="text-[#F56A00] font-heading font-black text-2xl md:text-3xl tracking-wider shrink-0">
+        <span className="text-primary/70 font-heading font-semibold text-base md:text-lg tracking-widest shrink-0">
           {segment}
         </span>
       </div>

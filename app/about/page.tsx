@@ -207,7 +207,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CLOSING QUOTE ── */}
-      <section className="bg-gradient-to-br from-[#7A1500] via-[#E84500] to-[#FF9E00] py-16 md:py-20">
+      <section className="bg-gradient-to-br from-[#C05820] via-[#D97A48] to-[#F0A868] py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <div className="text-5xl text-white/30 font-heading mb-4">&ldquo;</div>
@@ -370,7 +370,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-r from-[#1C0300] to-primary py-16 text-center">
+      <section className="bg-gradient-to-r from-[#7B3F00] to-primary py-16 text-center">
         <div className="max-w-2xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">

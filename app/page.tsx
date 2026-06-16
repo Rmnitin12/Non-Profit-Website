@@ -15,7 +15,6 @@ import MoodCheckIn from "@/components/MoodCheckIn";
 import AffirmationOfDay from "@/components/AffirmationOfDay";
 import CommunityVoices from "@/components/CommunityVoices";
 import ScrollReveal from "@/components/ScrollReveal";
-import HeroParticles from "@/components/HeroParticles";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import TiltCard from "@/components/TiltCard";
 import FloatingFaces from "@/components/FloatingFaces";
@@ -77,10 +76,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-[92vh] flex items-center justify-center bg-gradient-to-br from-[#7A1500] via-[#E84500] to-[#FF9E00] overflow-hidden">
-        {/* Ember particles */}
-        <HeroParticles />
-
+      <section className="relative min-h-[92vh] flex items-center justify-center bg-gradient-to-br from-[#C05820] via-[#D97A48] to-[#F0A868] overflow-hidden">
         {/* Floating illustrated faces */}
         <FloatingFaces variant="hero" />
 
@@ -166,7 +162,7 @@ export default function HomePage() {
             {missionCards.map(({ icon: Icon, title, desc }, i) => (
               <ScrollReveal key={title} delay={i * 120} direction="up">
                 <TiltCard className="h-full">
-                  <div className="bg-white rounded-2xl p-8 shadow-sm border-b-4 border-primary flex flex-col items-center text-center h-full">
+                  <div className="bg-white rounded-2xl p-8 shadow-md flex flex-col items-center text-center h-full">
                     <div className="w-14 h-14 bg-brand-light rounded-xl flex items-center justify-center mb-4">
                       <Icon className="w-7 h-7 text-primary" aria-hidden="true" />
                     </div>
