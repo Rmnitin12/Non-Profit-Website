@@ -18,6 +18,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import HeroParticles from "@/components/HeroParticles";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import TiltCard from "@/components/TiltCard";
+import FloatingFaces from "@/components/FloatingFaces";
 
 export const metadata: Metadata = {
   title: "TSCSNC — Embracing Black Mental Health",
@@ -79,6 +80,9 @@ export default function HomePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center bg-gradient-to-br from-[#7A1500] via-[#E84500] to-[#FF9E00] overflow-hidden">
         {/* Ember particles */}
         <HeroParticles />
+
+        {/* Floating illustrated faces */}
+        <FloatingFaces variant="hero" />
 
         {/* Decorative background blobs */}
         <div

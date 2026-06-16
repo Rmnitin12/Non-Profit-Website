@@ -1,3 +1,5 @@
+import FloatingFaces from "@/components/FloatingFaces";
+
 interface PageHeroProps {
   title: string;
   subtitle?: string;
@@ -10,6 +12,9 @@ export default function PageHero({ title, subtitle, breadcrumb }: PageHeroProps)
       {/* Decorative circles */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -translate-y-1/2 translate-x-1/4" aria-hidden="true" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/4" aria-hidden="true" />
+
+      {/* Floating illustrated faces */}
+      <FloatingFaces variant="page-hero" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {breadcrumb && (
