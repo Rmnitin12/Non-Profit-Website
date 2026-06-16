@@ -116,17 +116,17 @@ export default function AboutPage() {
               <ScrollReveal key={member.name} direction="up" delay={i * 80}>
                 <TiltCard className="h-full">
                   <div className="bg-brand-bg rounded-2xl p-8 shadow-sm text-center border border-brand-light h-full flex flex-col">
-                    <div className="w-24 h-24 rounded-full mx-auto mb-5 shadow-md overflow-hidden bg-primary flex items-center justify-center">
+                    <div className="w-44 h-44 rounded-full mx-auto mb-5 shadow-md overflow-hidden bg-primary flex items-center justify-center">
                       {member.photo ? (
                         <Image
                           src={member.photo}
                           alt={member.name}
-                          width={96}
-                          height={96}
+                          width={176}
+                          height={176}
                           className="w-full h-full object-cover"
                         />
                       ) : (
-                        <span className="text-white font-bold text-2xl font-heading" aria-label={`${member.name} initials`}>
+                        <span className="text-white font-bold text-4xl font-heading" aria-label={`${member.name} initials`}>
                           {member.initials}
                         </span>
                       )}
