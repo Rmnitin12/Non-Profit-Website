@@ -276,6 +276,15 @@ export default function AboutPage() {
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-4">
                 Wraparound Services for Mental Healthcare
               </h2>
+              <div className="flex justify-center mb-6">
+                <Image
+                  src="/images/autism-puzzle-heart.png"
+                  alt="Autism awareness puzzle piece heart"
+                  width={160}
+                  height={160}
+                  className="drop-shadow-md"
+                />
+              </div>
               <p className="text-brand-dark/70 max-w-2xl mx-auto leading-relaxed">
                 This is not an overnight process and will take time and contributions from those who want change — but this is one big step toward environmental and economical change.
               </p>
