@@ -77,6 +77,39 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="relative min-h-[92vh] flex items-center justify-center bg-gradient-to-br from-[#C05820] via-[#D97A48] to-[#F0A868] overflow-hidden">
+        {/* Big sun — top-right corner */}
+        <div
+          className="absolute top-0 right-0 pointer-events-none"
+          style={{ transform: "translate(30%, -30%)" }}
+          aria-hidden="true"
+        >
+          <svg width="560" height="560" viewBox="0 0 560 560" fill="none">
+            {/* Slow-spinning rays */}
+            <g style={{ transformOrigin: "280px 280px", animation: "sun-spin 50s linear infinite" }}>
+              {Array.from({ length: 16 }).map((_, i) => {
+                const angle = (i * 360) / 16;
+                const rad = (angle * Math.PI) / 180;
+                const x1 = 280 + 155 * Math.cos(rad);
+                const y1 = 280 + 155 * Math.sin(rad);
+                const x2 = 280 + 248 * Math.cos(rad);
+                const y2 = 280 + 248 * Math.sin(rad);
+                return (
+                  <line key={i} x1={x1} y1={y1} x2={x2} y2={y2}
+                    stroke="rgba(255,235,140,0.45)" strokeWidth="12" strokeLinecap="round" />
+                );
+              })}
+            </g>
+            {/* Glow halos */}
+            <circle cx="280" cy="280" r="240" fill="rgba(255,210,80,0.06)" />
+            <circle cx="280" cy="280" r="190" fill="rgba(255,220,100,0.10)" />
+            <circle cx="280" cy="280" r="155" fill="rgba(255,230,120,0.15)" />
+            {/* Sun body */}
+            <circle cx="280" cy="280" r="128" fill="rgba(255,238,150,0.38)" />
+            {/* Bright core */}
+            <circle cx="280" cy="280" r="90" fill="rgba(255,248,180,0.55)" />
+          </svg>
+        </div>
+
         {/* Floating illustrated faces */}
         <FloatingFaces variant="hero" />
 
