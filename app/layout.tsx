@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingDonate from "@/components/FloatingDonate";
 import CursorGlow from "@/components/CursorGlow";
+import AmbientPlayer from "@/components/AmbientPlayer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,6 +45,7 @@ export default function RootLayout({
         </ViewTransition>
         <Footer />
         <FloatingDonate />
+        <AmbientPlayer />
       </body>
     </html>
   );
