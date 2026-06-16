@@ -23,9 +23,8 @@ const contactItems = [
   {
     icon: Phone,
     label: "Phone",
-    // TODO: Replace with real phone number and update href to tel:+1XXXXXXXXXX
-    value: "(XXX) XXX-XXXX",
-    href: null,
+    value: "(925) 727-3583",
+    href: "tel:+19257273583",
   },
   {
     icon: MapPin,

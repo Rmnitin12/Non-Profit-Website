@@ -75,8 +75,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
                 <Phone className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
-                {/* TODO: Replace with real phone number */}
-                <span>(XXX) XXX-XXXX</span>
+                <a href="tel:+19257273583" className="hover:text-primary transition-colors duration-200">(925) 727-3583</a>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/70">
                 <Mail className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
