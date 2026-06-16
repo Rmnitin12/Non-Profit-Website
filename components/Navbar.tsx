@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart } from "lucide-react";
 
@@ -43,12 +44,22 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight group">
-          <span className="text-xl md:text-2xl font-bold text-primary font-heading tracking-wide group-hover:text-primary-dark transition-colors duration-200">
-            TSCSNC
-          </span>
-          <span className="text-[10px] md:text-xs text-brand-dark/70 font-body tracking-widest uppercase">
-            Embracing Black Mental Health
+        <Link href="/" aria-label="TSCSNC — Home" className="flex items-center gap-3 group">
+          <Image
+            src="/images/logotwin.png"
+            alt="Twins Sisters CSNC logo"
+            width={52}
+            height={52}
+            className="rounded-xl object-contain group-hover:scale-105 transition-transform duration-200"
+            priority
+          />
+          <span className="hidden sm:flex flex-col leading-tight">
+            <span className="text-lg md:text-xl font-bold text-primary font-heading tracking-wide group-hover:text-primary-dark transition-colors duration-200">
+              TSCSNC
+            </span>
+            <span className="text-[10px] text-brand-dark/60 font-body tracking-widest uppercase">
+              Embracing Black Mental Health
+            </span>
           </span>
         </Link>
 

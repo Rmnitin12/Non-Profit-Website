@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
 import { LinkedInIcon, NextdoorIcon } from "@/components/icons";
 import { useConfetti } from "@/hooks/useConfetti";
@@ -39,10 +40,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <p className="text-2xl font-bold text-primary font-heading mb-2">TSCSNC</p>
-            <p className="text-xs text-white/60 uppercase tracking-widest mb-4">
-              Embracing Black Mental Health
-            </p>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-white rounded-xl p-1.5 shrink-0">
+                <Image
+                  src="/images/logotwin.png"
+                  alt="Twins Sisters CSNC logo"
+                  width={64}
+                  height={64}
+                  className="rounded-lg object-contain"
+                />
+              </div>
+              <div>
+                <p className="text-xl font-bold text-primary font-heading leading-tight">TSCSNC</p>
+                <p className="text-[10px] text-white/50 uppercase tracking-widest">
+                  Embracing Black Mental Health
+                </p>
+              </div>
+            </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Twins Sisters Cumulative Supportive Networking Corporation is dedicated to embracing and uplifting Black mental health through community, compassion, and culturally affirming care.
             </p>
