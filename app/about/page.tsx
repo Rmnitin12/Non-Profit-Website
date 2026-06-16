@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Heart, Scale, Users, Zap, Shield } from "lucide-react";
+import { Heart, Scale, Users, Zap, Shield, Target, CheckCircle } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import MarqueeStrip from "@/components/MarqueeStrip";
@@ -62,11 +62,20 @@ const values = [
 
 const team = [
   {
+    initials: "JR",
+    photo: "/team/marvin.png",
+    name: "Jeffery Reddic",
+    role: "President",
+    bio: "Jeffery brings deep ties to the East Oakland community and a passionate commitment to the mission of TSCSNC. His leadership and advocacy help bridge the gap between those in need and the resources that can transform lives.",
+    quote: "It takes a village to raise a child, but it takes a village to support that child's parents.",
+  },
+  {
     initials: "SW",
-    photo: null,
-    name: "Shaquala Watts",
-    role: "Founder & Executive Director",
+    photo: "/team/shaquala.png",
+    name: "Shaquala (Queen) Watts",
+    role: "Founder",
     bio: "Driven by the memory of her brothers Derrick and Darrell, Shaquala founded TSCSNC to honor their legacy and uplift Black mental health in East Oakland. Her nonprofit experience and deep community roots guide every program we build.",
+    quote: null,
   },
   {
     initials: "NR",
@@ -74,13 +83,7 @@ const team = [
     name: "Nitin Ravikumar",
     role: "Chief Technology Officer",
     bio: "Nitin leads the technology vision for TSCSNC, building the digital infrastructure that connects community members to vital mental health resources. His commitment to accessible tech empowers the organization's reach and impact.",
-  },
-  {
-    initials: "JR",
-    photo: null,
-    name: "Jeffery Redic",
-    role: "Community Partner",
-    bio: "Jeffery brings deep ties to the East Oakland community and a passionate commitment to the mission of TSCSNC. His leadership and advocacy help bridge the gap between those in need and the resources that can transform lives.",
+    quote: null,
   },
 ];
 
@@ -112,7 +115,7 @@ export default function AboutPage() {
             {team.map((member, i) => (
               <ScrollReveal key={member.name} direction="up" delay={i * 80}>
                 <TiltCard className="h-full">
-                  <div className="bg-brand-bg rounded-2xl p-8 shadow-sm text-center border border-brand-light h-full">
+                  <div className="bg-brand-bg rounded-2xl p-8 shadow-sm text-center border border-brand-light h-full flex flex-col">
                     <div className="w-24 h-24 rounded-full mx-auto mb-5 shadow-md overflow-hidden bg-primary flex items-center justify-center">
                       {member.photo ? (
                         <Image
@@ -131,6 +134,13 @@ export default function AboutPage() {
                     <h3 className="font-heading font-bold text-xl text-brand-dark mb-1">{member.name}</h3>
                     <p className="text-primary font-medium text-sm mb-4">{member.role}</p>
                     <p className="text-brand-dark/70 text-sm leading-relaxed">{member.bio}</p>
+                    {member.quote && (
+                      <blockquote className="mt-5 pt-5 border-t border-brand-light">
+                        <p className="text-brand-dark/60 text-xs italic leading-relaxed">
+                          &ldquo;{member.quote}&rdquo;
+                        </p>
+                      </blockquote>
+                    )}
                   </div>
                 </TiltCard>
               </ScrollReveal>
@@ -234,7 +244,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="font-heading font-bold text-2xl text-brand-dark mb-4">Our Mission</h3>
                   <p className="text-brand-dark/80 leading-relaxed">
-                    To provide culturally competent mental health support, resources, and services to Black individuals and families — creating pathways to healing, resilience, and wholeness through community-centered care rooted in the legacy of Derrick and Darrell Joseph.
+                    To decrease mental health issues in urban communities by providing direct and comprehensive care to individuals in need of psychological and psychiatric help. We collect data from each client to identify root causes — comparing cultures, races, ethnicities, gender, genetics, and personality traits — so we can understand where the issues start and build lasting solutions.
                   </p>
                 </div>
               </TiltCard>
@@ -248,10 +258,73 @@ export default function AboutPage() {
                   </div>
                   <h3 className="font-heading font-bold text-2xl text-white mb-4">Our Vision</h3>
                   <p className="text-white/90 leading-relaxed">
-                    A world where Black mental health is prioritized, destigmatized, and fully supported — where Oakland and every community the Twins touched can reclaim their heritage, and where thriving communities are the norm, not the exception.
+                    A world where the mind is deprogrammed from its psychological beliefs and reprogrammed to its actual reality. Where Schizophrenia, chronic drug use, and other untreated and undiagnosed mental health issues are no longer ignored — and where every individual can access the comprehensive care needed to break barriers and reclaim their lives.
                   </p>
                 </div>
               </TiltCard>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OUR GOALS ── */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">Our Goals</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                Wraparound Services for Mental Healthcare
+              </h2>
+              <p className="text-brand-dark/70 max-w-2xl mx-auto leading-relaxed">
+                This is not an overnight process and will take time and contributions from those who want change — but this is one big step toward environmental and economical change.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start max-w-5xl mx-auto">
+            <ScrollReveal direction="left" delay={80}>
+              <div className="bg-brand-bg rounded-2xl p-8 md:p-10 border border-brand-light shadow-sm">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-brand-light rounded-lg flex items-center justify-center shrink-0">
+                    <Target className="w-5 h-5 text-primary" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-heading font-bold text-xl text-brand-dark">Services Include, But Are Not Limited To</h3>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Therapy",
+                    "Psychiatry",
+                    "Case Management",
+                    "Client Navigator",
+                    "Support Groups",
+                    "Housing",
+                    "And whatever else is needed to break barriers and lead one to autonomy",
+                  ].map((service) => (
+                    <li key={service} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" aria-hidden="true" />
+                      <span className="text-brand-dark/80 leading-relaxed text-sm">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={80}>
+              <div className="space-y-6">
+                <div className="bg-brand-bg rounded-2xl p-7 border border-brand-light shadow-sm">
+                  <h4 className="font-heading font-bold text-lg text-brand-dark mb-3">The Problem We Address</h4>
+                  <p className="text-brand-dark/75 leading-relaxed text-sm">
+                    There are a multitude of people who suffer from untreated and undiagnosed mental health issues and cannot access proper care. Mental health facilities are over capacity, understaffed, and not equipped for severe mental health services. Schizophrenia and chronic drug use are among the biggest unattended and untreated illnesses affecting our communities.
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-[#7A1500] to-[#E84500] rounded-2xl p-7 shadow-sm">
+                  <h4 className="font-heading font-bold text-lg text-white mb-3">Our Core Belief</h4>
+                  <p className="text-white/90 leading-relaxed text-sm">
+                    You have to deprogram the mind from its psychological beliefs in order to reprogram the mind to its actual reality. That&apos;s what treatment and support at TSCSNC will uncover.
+                  </p>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
         </div>
