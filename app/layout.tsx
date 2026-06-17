@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import FloatingDonate from "@/components/FloatingDonate";
 import CursorGlow from "@/components/CursorGlow";
 import AmbientPlayer from "@/components/AmbientPlayer";
-import FallingLeaves from "@/components/FallingLeaves";
+import NatureParticles from "@/components/NatureParticles";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col bg-brand-bg">
-        <FallingLeaves />
+        <NatureParticles />
         <CursorGlow />
         <Navbar />
         <ViewTransition enter="page-enter" exit="page-exit">
