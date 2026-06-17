@@ -149,8 +149,8 @@ export default function HomePage() {
             Twins Sisters Cumulative Supportive Networking Corporation
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in-up animate-delay-100">
-            Mental Health Solutions{" "}
-            <span className="text-gradient-animate">You Can Trust</span>
+            You Have a{" "}
+            <span className="text-gradient-animate">Purpose</span>
           </h1>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in-up animate-delay-200">
             TSCSNC is dedicated to embracing and uplifting Black mental health in our community through compassionate, culturally affirming care and support.
