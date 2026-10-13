@@ -172,10 +172,9 @@ export default function NatureParticles() {
         aria-hidden="true"
       />
 
-      {/* Toggle pill — sits above the Calm music button */}
+      {/* Toggle pill — desktop only, right side */}
       <div
-        className="fixed left-6 z-50 flex items-center gap-1 bg-white rounded-full shadow-md border border-brand-light p-1.5"
-        style={{ bottom: "5.5rem" }}
+        className="hidden md:flex fixed right-6 bottom-6 z-40 items-center gap-1 bg-white rounded-full shadow-md border border-brand-light p-1.5"
         role="group"
         aria-label="Nature effect"
       >

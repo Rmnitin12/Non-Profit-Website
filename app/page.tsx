@@ -11,6 +11,7 @@ import {
 import StatsBar from "@/components/StatsBar";
 import WaveDivider from "@/components/WaveDivider";
 import MailingListSection from "@/components/MailingListSection";
+import CandleLighting from "@/components/CandleLighting";
 import MoodCheckIn from "@/components/MoodCheckIn";
 import AffirmationOfDay from "@/components/AffirmationOfDay";
 import CommunityVoices from "@/components/CommunityVoices";
@@ -396,6 +397,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── CANDLE LIGHTING ── */}
+      <CandleLighting />
 
       {/* ── MAILING LIST ── */}
       <MailingListSection />

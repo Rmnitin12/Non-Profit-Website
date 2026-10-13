@@ -17,8 +17,7 @@ const contactItems = [
     icon: Mail,
     label: "Email",
     // TODO: Replace with real email address, created this email address at last working session
-    value: "info@twinssisterscsnc.org",
-    href: "mailto:info@twinssisterscsnc.org",
+    value: "info@twinssisterscsnc.org", 
   },
   {
     icon: Phone,
