@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ExternalLink, Phone, MessageSquare, Brain, Heart, Sparkles, Shield } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Phone, MessageSquare, Brain, Heart, Sparkles, Shield, ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import WaveDivider from "@/components/WaveDivider";
 import BreathingExercise from "@/components/BreathingExercise";
@@ -210,6 +211,35 @@ export default function ResourcesPage() {
 
       {/* ── BREATHING EXERCISE ── */}
       <BreathingExercise />
+
+      {/* ── MIRROR WITHIN TEASER ── */}
+      <section className="py-16 bg-brand-bg">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up">
+            <div className="rounded-3xl bg-[#241A26] text-[#F4ECDD] px-6 py-10 md:px-12 md:py-12 text-center shadow-xl">
+              <p className="text-4xl mb-3" aria-hidden="true">🪞</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#8FA290] mb-2">
+                Personality · Trauma · Shadow Work
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">The Mirror Within</h2>
+              <p className="text-[#F4ECDD]/75 max-w-xl mx-auto mb-6">
+                A 60-question self-discovery experience. Uncover your archetype, attachment style, trauma
+                response, and shadow pattern — with journal prompts and a 7-day healing plan.
+              </p>
+              <Link
+                href="/resources/mirror-within"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#C6934B] to-[#b17c37] px-7 py-3.5 font-bold text-[#241A26] shadow-lg transition hover:brightness-110"
+              >
+                Take the Assessment
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+              <p className="text-xs text-[#F4ECDD]/45 mt-4">
+                For self-reflection and growth — not a clinical diagnosis.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* ── SECOND CRISIS BANNER ── */}
       <section className="bg-gradient-to-br from-accent to-primary py-16 text-center px-4">
